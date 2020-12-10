@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-ra-WCV">
                                 <rect key="frame" x="184.5" y="406" width="45" height="30"/>
                                 <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hb-Cp-tH6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,6 +96,7 @@
                     <connections>
                         <outlet property="driveLabel" destination="w8I-Vb-Vo3" id="Ne2-WI-wGB"/>
                         <outlet property="emailField" destination="h6v-iU-VqV" id="uo2-Cc-11e"/>
+                        <outlet property="loginButton" destination="ONE-ra-WCV" id="bnq-z0-rpa"/>
                         <outlet property="passwordField" destination="nH7-em-qCP" id="7Sd-FQ-VOj"/>
                         <outlet property="riderDriverSwitch" destination="MQv-bu-wrP" id="45y-zE-ysa"/>
                         <outlet property="riderLabel" destination="MgM-ok-sNc" id="DZF-Pw-wbD"/>
@@ -102,6 +106,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="30.803571428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FI7-ZD-kn9">
+            <objects>
+                <viewController id="TNk-sQ-dv6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMC-Bx-Qve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SJJ-J2-iOG">
+                                <rect key="frame" x="7" y="64" width="387" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SJJ-J2-iOG" secondAttribute="height" multiplier="128:127" id="RfH-7b-87P"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i2w-U6-SRL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="top" secondItem="i2w-U6-SRL" secondAttribute="top" constant="20" id="Hbw-7h-MsE"/>
+                            <constraint firstItem="i2w-U6-SRL" firstAttribute="bottom" secondItem="SJJ-J2-iOG" secondAttribute="bottom" constant="414" id="gre-Te-yPI"/>
+                            <constraint firstItem="i2w-U6-SRL" firstAttribute="trailing" secondItem="SJJ-J2-iOG" secondAttribute="trailing" constant="20" id="rej-9b-uHg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9hs-mc-K0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.62318840579712" y="30.803571428571427"/>
         </scene>
     </scenes>
     <resources>

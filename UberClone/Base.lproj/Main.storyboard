@@ -30,7 +30,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nH7-em-qCP">
                                 <rect key="frame" x="20" y="197" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQv-bu-wrP">
                                 <rect key="frame" x="182.5" y="277" width="51" height="31"/>
@@ -41,7 +41,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="drive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-Vb-Vo3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-Vb-Vo3">
                                 <rect key="frame" x="258" y="277" width="54" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -51,8 +51,7 @@
                                 <rect key="frame" x="180" y="339" width="54" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bl1-4b-6Wc"/>
-                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1m-cd-qo9"/>
+                                    <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4n-FD-k5g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vua-ow-QDb">
@@ -64,9 +63,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-ra-WCV">
                                 <rect key="frame" x="184.5" y="406" width="45" height="30"/>
                                 <state key="normal" title="LOGIN"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ive-S2-QcQ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,11 +93,10 @@
                     <connections>
                         <outlet property="driveLabel" destination="w8I-Vb-Vo3" id="Ne2-WI-wGB"/>
                         <outlet property="emailField" destination="h6v-iU-VqV" id="uo2-Cc-11e"/>
-                        <outlet property="loginButton" destination="ONE-ra-WCV" id="diZ-zv-htb"/>
-                        <outlet property="passwordField" destination="8bC-Xf-vdC" id="AZn-0a-rdm"/>
+                        <outlet property="passwordField" destination="nH7-em-qCP" id="7Sd-FQ-VOj"/>
                         <outlet property="riderDriverSwitch" destination="MQv-bu-wrP" id="45y-zE-ysa"/>
                         <outlet property="riderLabel" destination="MgM-ok-sNc" id="DZF-Pw-wbD"/>
-                        <outlet property="signButton" destination="qOf-Iy-9B4" id="Xs2-7S-DP2"/>
+                        <outlet property="signButton" destination="qOf-Iy-9B4" id="s2U-nR-UGX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

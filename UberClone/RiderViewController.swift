@@ -6,24 +6,31 @@
 //
 
 import UIKit
+import MapKit
+class RiderViewController: UIViewController, CLLocationManagerDelegate {
 
-class RiderViewController: UIViewController {
-
+    @IBOutlet weak var map: MKMapView!
+    
+    @IBOutlet weak var callUberButton: UIButton!
+    var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let coordi = manager.location?.coordinate {
+           let center =   CLLocationCoordinate2D(latitude: coordi.latitude, longitude: coordi.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            map.setRegion(region, animated: true)
+        }
     }
-    */
-
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func callUberTapped(_ sender: Any) {
+    }
 }

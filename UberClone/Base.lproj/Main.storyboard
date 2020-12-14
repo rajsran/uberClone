@@ -101,6 +101,7 @@
                         <outlet property="riderDriverSwitch" destination="MQv-bu-wrP" id="45y-zE-ysa"/>
                         <outlet property="riderLabel" destination="MgM-ok-sNc" id="DZF-Pw-wbD"/>
                         <outlet property="signButton" destination="qOf-Iy-9B4" id="s2U-nR-UGX"/>
+                        <segue destination="iGH-0a-0BM" kind="presentation" identifier="riderSeque" id="CvV-n1-M55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -112,26 +113,53 @@
             <objects>
                 <viewController id="TNk-sQ-dv6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMC-Bx-Qve">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SJJ-J2-iOG">
-                                <rect key="frame" x="7" y="64" width="387" height="384"/>
+                                <rect key="frame" x="20" y="56" width="374" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SJJ-J2-iOG" secondAttribute="height" multiplier="128:127" id="RfH-7b-87P"/>
+                                    <constraint firstAttribute="height" constant="350" id="Tp0-kG-6JP"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92U-Ud-jpY">
+                                <rect key="frame" x="174.5" y="432" width="65" height="30"/>
+                                <state key="normal" title="call Uber "/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i2w-U6-SRL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="top" secondItem="i2w-U6-SRL" secondAttribute="top" constant="20" id="Hbw-7h-MsE"/>
-                            <constraint firstItem="i2w-U6-SRL" firstAttribute="bottom" secondItem="SJJ-J2-iOG" secondAttribute="bottom" constant="414" id="gre-Te-yPI"/>
-                            <constraint firstItem="i2w-U6-SRL" firstAttribute="trailing" secondItem="SJJ-J2-iOG" secondAttribute="trailing" constant="20" id="rej-9b-uHg"/>
+                            <constraint firstItem="92U-Ud-jpY" firstAttribute="centerX" secondItem="JMC-Bx-Qve" secondAttribute="centerX" id="2Tw-ht-uim"/>
+                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="top" secondItem="i2w-U6-SRL" secondAttribute="top" id="3GK-8u-9Ze"/>
+                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="leading" secondItem="JMC-Bx-Qve" secondAttribute="leadingMargin" id="4Oy-Cu-dQx"/>
+                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="centerX" secondItem="JMC-Bx-Qve" secondAttribute="centerX" id="4q8-hD-1LG"/>
+                            <constraint firstItem="92U-Ud-jpY" firstAttribute="top" secondItem="SJJ-J2-iOG" secondAttribute="bottom" constant="26" id="Lz9-Ws-6ma"/>
+                            <constraint firstItem="92U-Ud-jpY" firstAttribute="top" secondItem="SJJ-J2-iOG" secondAttribute="bottom" constant="26" id="Zzf-nN-8SK"/>
+                            <constraint firstItem="SJJ-J2-iOG" firstAttribute="centerX" secondItem="92U-Ud-jpY" secondAttribute="centerX" id="off-Rl-PFq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ax4-WL-pkd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hs-mc-K0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763.7681159420292" y="30.803571428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jm4-Kp-Up1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iGH-0a-0BM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajt-DS-5zv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TNk-sQ-dv6" kind="relationship" relationship="rootViewController" id="0wS-TI-2C0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Leq-Vv-Aq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="30.803571428571427"/>
         </scene>

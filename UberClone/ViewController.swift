@@ -38,7 +38,8 @@ class ViewController: UIViewController {
                         if error != nil {
                             self.displayAlert(title: "error", message: error!.localizedDescription)
                         } else {
-                            print("success")
+                            print("  sign up success")
+                            self.performSegue(withIdentifier: "riderSeque", sender: nil)
                         }
                     }
                 }else {
@@ -47,7 +48,8 @@ class ViewController: UIViewController {
                         if error != nil {
                             self?.displayAlert(title: "error", message: error!.localizedDescription)
                         } else {
-                            print("success")
+                            print(" log in success")
+                            self?.performSegue(withIdentifier: "riderSeque", sender: nil)
                         }
                     }
                 }
